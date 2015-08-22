@@ -45,7 +45,7 @@ app.route('/')
 		var pluginDescription = "";
 		var pluginNamePackage = "";
 		var pluginNameInstance = "";
-		//var pluginAuthorEmail = "";
+		var pluginDescription = "";
 		var pluginAuthorFull = "";
 		var destination = "";
 		var data = req.body
@@ -58,9 +58,9 @@ app.route('/')
 		pluginSlug = String(data.slug).length ? String(data.slug).toLowerCase() : 'amazing-plugin';
 		pluginName = String(data.name).length ? data.name : 'Amazing Plugin';
 		pluginURI = String(data.uri).length ? data.uri : 'http://example.com/amazing-plugin-uri/' ;
-		pluginAuthor = String(data.author.name).length ? data.author.name : 'Plugin Author' ;
-		pluginAuthorURI = String(data.author.uri).length ? data.author.uri : 'http://mydomain.tld';
-		//pluginAuthorEmail = String(data.author.email).length ? data.author.email : 'my@email.tld';
+		pluginAuthor = 'PressApps' ;
+		pluginAuthorURI = 'http://pressapps.co';
+		pluginDescription = String(data.description).length ? data.description : '';
 		pluginNamePackage = capitalize( pluginSlug );
 		pluginNameInstance = pluginSlug.replace(/-/gi, '_');
 		pluginAuthorFull = pluginAuthor;
