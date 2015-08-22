@@ -133,6 +133,21 @@ app.route('/')
 
 				});
 
+				// Plugin Description
+				replace({
+
+					regex: "This is a short description of what the plugin does. It's displayed in the WordPress admin area.",
+
+					replacement: pluginDescription,
+
+					paths:[destination + '/' + pluginSlug + '/' + pluginSlug +'.php'],
+
+					recursive: true,
+
+					silent: true
+
+				});
+
 				//Plugin URI
 				replace({
 
