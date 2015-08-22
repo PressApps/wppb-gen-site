@@ -45,7 +45,7 @@ app.route('/')
 		var pluginDescription = "";
 		var pluginNamePackage = "";
 		var pluginNameInstance = "";
-		var pluginAuthorEmail = "";
+		//var pluginAuthorEmail = "";
 		var pluginAuthorFull = "";
 		var destination = "";
 		var data = req.body
@@ -60,10 +60,10 @@ app.route('/')
 		pluginURI = String(data.uri).length ? data.uri : 'http://example.com/amazing-plugin-uri/' ;
 		pluginAuthor = String(data.author.name).length ? data.author.name : 'Plugin Author' ;
 		pluginAuthorURI = String(data.author.uri).length ? data.author.uri : 'http://mydomain.tld';
-		pluginAuthorEmail = String(data.author.email).length ? data.author.email : 'my@email.tld';
+		//pluginAuthorEmail = String(data.author.email).length ? data.author.email : 'my@email.tld';
 		pluginNamePackage = capitalize( pluginSlug );
 		pluginNameInstance = pluginSlug.replace(/-/gi, '_');
-		pluginAuthorFull = pluginAuthor +' <'+ pluginAuthorEmail + '>';
+		pluginAuthorFull = pluginAuthor;
 
 		destination = process.cwd() + "/tmp/" + pluginSlug + '-' + new Date().getTime();
 
@@ -285,7 +285,7 @@ clean.start();
  */
 var getSourceCode = function(){
 
-	var repo = {user: 'DevinVinson', repo: 'WordPress-Plugin-Boilerplate', ref: 'master'};
+	var repo = {user: 'pressapps', repo: 'WordPress-Plugin-Boilerplate', ref: 'master'};
 
 	var destination = process.cwd() + "/source/";
 
