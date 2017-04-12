@@ -59,7 +59,7 @@ app.route('/')
 		pluginName = String(data.name).length ? data.name : 'Amazing Plugin';
 		pluginURI = String(data.uri).length ? data.uri : 'http://example.com/amazing-plugin-uri/' ;
 		pluginAuthor = 'PressApps' ;
-		pluginAuthorURI = 'http://pressapps.co';
+		pluginAuthorURI = 'https://codecanyon.net/user/pressapps';
 		pluginDescription = String(data.description).length ? data.description : '';
 		pluginNamePackage = capitalize( pluginSlug );
 		pluginNameInstance = pluginSlug.replace(/-/gi, '_');
